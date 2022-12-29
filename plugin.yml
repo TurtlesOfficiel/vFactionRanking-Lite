@@ -1,0 +1,13 @@
+name: vFactionRanking-Lite
+version: 0.0.2
+author: VTO INC. TurtlesOfficiel
+main: net.vtorganisation.ranking.Ranking
+softdepend:
+  - "Factions"
+
+commands:
+  ranking:
+    aliases:
+      - "leaderboard"
+      - "lb"
+  fpoints:

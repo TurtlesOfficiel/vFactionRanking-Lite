@@ -1,0 +1,41 @@
+# | ===========================================|
+# |              vFactionRanking-Lite          |
+# |           Created by VT Organisation       |
+# |                TurtlesOfficiel             |
+# |                                            |
+# |                    Discord :               |
+# |                                            |
+# |         https://discord.gg/KnCfJk6y2A      |
+# | ===========================================|
+
+
+#admin-permission: ranking.admin
+
+ranking:
+  #just the operators will receive their message
+  backup-message: true
+  #this interval is in seconds, 3 hours per default
+  backup-interval: 10800
+
+  header:
+    - "&e&m------------------------------"
+    - "&e Top #&610&f - &evFactionRanking-Lite"
+    - ""
+  #Usage : %ranking%, %factionName% and %points%
+  format: "&6#&c&l%ranking%&7 -&e %factionName%&f :&6&l %points% &epoints"
+  footer:
+    - ""
+    - "&e&m------------------------------"
+
+
+messages:
+  prefix: "&e[Ranking] "
+  not_permission: "&cYou do not have permission to run this command!"
+  not_online: "&cThe player is not online!"
+  player_has_not_faction: "&cThe player has no faction!"
+  invalid_number: "&cError, you must enter a number!"
+  cannot_withdraw_more: "&cYou can't take out more points !"
+  points_add_to_faction: "&aYou have added &e%points% points&a to the faction &e%faction%"
+  points_remove_to_faction: "&cYou have withdrawn &e%points% points&c to the faction &e%faction%"
+  points_set_to_faction: "&aYou have set &e%points% points&a to the faction &e%faction%"
+  points_reset_to_faction: "&aYou have reset all points to the faction &e%faction%"
