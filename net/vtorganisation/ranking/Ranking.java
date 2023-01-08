@@ -97,4 +97,5 @@ public class Ranking extends JavaPlugin {
     public RankingManager getRankingManager(){
         return this.rankingManager;
     }
+
 }

@@ -17,6 +17,6 @@ public class AutoSaves extends BukkitRunnable {
 
         Bukkit.getOperators().stream().filter(OfflinePlayer::isOnline).forEach(offlinePlayer ->
                 Bukkit.getPlayer(offlinePlayer.getName()).sendMessage(
-                        "§6[§evFactionRanking-Lite§6]§a AutoSaves complete. §7(§d" + (System.currentTimeMillis() - l) + "ms§7)"));
+                        "§6[§evFactionRanking-Lite§6]§a Auto-saves complete. §7(§d" + (System.currentTimeMillis() - l) + "ms§7)"));
     }
 }

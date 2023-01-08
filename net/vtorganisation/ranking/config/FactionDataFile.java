@@ -1,7 +1,7 @@
 package net.vtorganisation.ranking.config;
 
-import net.vtorganisation.ranking.Ranking;
 import net.vtorganisation.ranking.FactionObject;
+import net.vtorganisation.ranking.Ranking;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -33,7 +33,7 @@ public class FactionDataFile {
 
             FileConfiguration fileConfig = YamlConfiguration.loadConfiguration(file);
             String factionName = fileConfig.getString("factionName");
-            int points = fileConfig.getInt("points");
+            long points = fileConfig.getLong("points");
 
             if(Ranking.getInstance().getFactionManager().getAllFactionName().contains(factionName)){
                 FactionObject factionObject = new FactionObject(factionName);

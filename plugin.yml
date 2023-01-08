@@ -1,9 +1,10 @@
 name: vFactionRanking-Lite
-version: 0.0.2
+version: 0.0.3
 author: VTO INC. TurtlesOfficiel
 main: net.vtorganisation.ranking.Ranking
 softdepend:
   - "Factions"
+
 
 commands:
   ranking:

@@ -17,6 +17,14 @@ ranking:
   #this interval is in seconds, 3 hours per default
   backup-interval: 10800
 
+  #change the colors of the icons ( don’t put '&' or '§' before, just the letter! )
+  color-icons:
+    top1: 'a'
+    top2: '2'
+    top3: '6'
+    top4: 'c'
+    others: '4'
+
   header:
     - "&e&m------------------------------"
     - "&e Top #&610&f - &evFactionRanking-Lite"

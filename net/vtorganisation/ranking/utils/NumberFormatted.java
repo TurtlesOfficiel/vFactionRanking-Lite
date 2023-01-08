@@ -8,7 +8,7 @@ public class NumberFormatted {
     private static final String d = "T";
     private static final String e = "Q";
 
-    public static String formatted(int n) {
+    public static String formatted(long n) {
         if (n >= 1.0E15) {
                 String s = String.format("%.2f", n / 1.0E15);
                 final String substring = s.substring(s.indexOf(".") + 1);
