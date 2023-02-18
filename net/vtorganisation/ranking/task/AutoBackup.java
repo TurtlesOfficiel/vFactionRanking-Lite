@@ -6,7 +6,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.scheduler.BukkitRunnable;
 
-public class AutoSaves extends BukkitRunnable {
+public class AutoBackup extends BukkitRunnable {
 
     @Override
     public void run() {

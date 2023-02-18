@@ -7,7 +7,8 @@ import net.vtorganisation.ranking.integration.FactionsManager;
 import net.vtorganisation.ranking.integration.FactionsUUID;
 import net.vtorganisation.ranking.manager.PluginsManager;
 import net.vtorganisation.ranking.manager.RankingManager;
-import net.vtorganisation.ranking.task.AutoSaves;
+import net.vtorganisation.ranking.placeholder.RankingExpansion;
+import net.vtorganisation.ranking.task.AutoBackup;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,16 +38,19 @@ public class Ranking extends JavaPlugin {
 
         ConfigHandler.register();
 
-        if (!setupFactionsManager()) {
+        if(!setupFactionsManager()) {
             Bukkit.getPluginManager().disablePlugin(this);
             System.out.println("[vFactionRanking-Lite] §cFactionsuuid or SaberFactions not found! Disabling vFactionRanking-Lite!");
             return;
+        }
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
+            new RankingExpansion().register();
         }
         this.factionDataFile.loadRanking();
 
     	PluginsManager.register();
 
-        new AutoSaves().runTaskTimerAsynchronously(this, 20L * ConfigHandler.backupInterval, 20L * ConfigHandler.backupInterval);
+        new AutoBackup().runTaskTimerAsynchronously(this, 20L * ConfigHandler.backupInterval, 20L * ConfigHandler.backupInterval);
 
     	enabled(l);
     }
@@ -97,5 +101,4 @@ public class Ranking extends JavaPlugin {
     public RankingManager getRankingManager(){
         return this.rankingManager;
     }
-
 }
